@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+
+import Header from "./component/header/Header";
+import Navigation from "./component/navigation/Navigation";
+import Home from "./component/home/Home";
+import EncounterGenerator from "./component/generator/EncounterGenerator";
+import MonsterLibrary from "./component/library/MonsterLibrary";
+import MonsterConstructor from "./component/constructor/MonsterConstructor";
+import MonsterPage from "./component/monster/MonsterPage";
+import ErrorPage from "./component/ErrorPage/ErrorPage";
+
+
 import './App.css';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Navigation />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/generator' element={<EncounterGenerator />} />
+        <Route path='/library' element={<MonsterLibrary />} />
+        <Route path='/constructor' element={<MonsterConstructor />} />
+        <Route path='/monster/:monstername' element={<MonsterPage />} />
+        <Route path='*' element={<ErrorPage />} />
+      </Routes>
+    </Router>
   );
 }
 
