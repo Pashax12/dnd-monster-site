@@ -1,5 +1,5 @@
 import React from "react";
-import './MonsterConstructor.css';
+import './style.css';
 
 export default function MonsterConstructor(){
     return(

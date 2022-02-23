@@ -1,5 +1,5 @@
 import React from "react";
-import './MonsterPage.css';
+import './style.css';
 
 export default function MonsterPage() {
     return (

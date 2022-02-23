@@ -1,0 +1,25 @@
+.news--container{
+    display: block;
+    background: #EECC88;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.6);
+}
+.news--title{
+    margin: 2px 7px ;
+    font-size: 25px;
+}
+.news--short{
+    margin:2px 7px;
+}
+.news--data{
+    margin: 2px 10px;
+}
+.news--link{
+    margin: 2px 10px 5px;
+    text-decoration: none;
+}

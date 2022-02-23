@@ -1,5 +1,5 @@
 import React from "react";
-import './EncounterGenerator.css'
+import './style.css'
 
 export default function EncounterGenerator() {
     return(

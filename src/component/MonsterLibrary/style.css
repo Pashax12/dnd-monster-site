@@ -1,0 +1,64 @@
+.library--container{
+    display: block;
+    width: 80%;
+    scrollbar-color: #E0CDA7, #EECC88;     /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: none;
+    margin: auto;
+    padding: 10px;
+    background:  linear-gradient(to right, #DDC493, #EECC88);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+.library--boxes{
+
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+
+.library--box-1{
+    max-height: 800px;
+    display: flex;
+    margin: 7px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+    flex-basis: 60%;
+    border-right: 2px solid rgba(65,55,68,0.74);
+    box-sizing: border-box;
+}
+.library--box-2{
+    margin: 7px;
+}
+
+h1,h3{
+    width: 100%;
+    margin: 30px;
+    font-family: Risque, serif;
+    font-style: normal;
+    font-weight: normal;
+}
+h1{
+    font-size: 50px;
+}
+h3{
+    font-size: 30px;
+}
+
+
+@media (max-width: 700px) {
+    .library--box-1{
+        justify-content: space-around;
+        display: flex;
+        margin: 7px;
+        flex-wrap: wrap;
+        overflow: auto;
+        flex-basis: 100%;
+        border-right:  0;
+        border-bottom:  2px solid rgba(65,55,68,0.74);
+        box-sizing: border-box;
+    }
+}
