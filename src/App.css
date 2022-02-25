@@ -1,10 +1,4 @@
 body{
-    background: url("img/dndSiteProject.png") no-repeat;
-    background-size: 100%;
-}
-@media (max-width: 600px) {
-    body{
-        background: url("img/dndSiteProject.png");
-        background-size: 200%;
-    }
+    background: url("img/dndSiteProject.png") no-repeat fixed center top;
+    background-size: cover;
 }
