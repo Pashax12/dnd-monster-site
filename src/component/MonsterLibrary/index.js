@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import resources from '../../resource.json';
 import './style.css';
-import Block from "./Block/Block";
+import Block from "../Block";
 import {nanoid} from "nanoid";
 import Filter from "./Filters";
 import {Scrollbars} from "react-custom-scrollbars-2";
@@ -49,18 +49,19 @@ export default function MonsterLibrary(){
     return(
     <main className='library--container'>
         <div className='library--boxes'>
-
+            <div className='library--box-1'>
+                <h1>Our monsters</h1>
                 <Scrollbars
                     autoHide
-                    className='library--box-1'
                     universal
                     autoHeight
                     autoHeightMax={600}>
                     <div className='library--contest'>
-                        <h1>Our monster</h1>
-                        {(monsters.length>1 && monsters.map(value =><Block key={nanoid()} value={value}/>))}
+                        {(monsters.length>1 && monsters.map(value => <Block key={nanoid()} value={value}/>))}
                     </div>
                 </Scrollbars>
+            </div>
+
             <div className='library--box-2'>
                 <h3>Filters</h3>
                 <Filter value={{data:formData, change:handleChange}} />

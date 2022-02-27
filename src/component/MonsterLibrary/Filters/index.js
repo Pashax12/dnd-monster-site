@@ -3,9 +3,9 @@ import './style.css';
 
 export default function Filter(props){
     return(
-        <form className='filter--container'>
-            <p className='filter--text-head'>Monster challenge</p>
-            <label className='filter--text'>Monster min challenge
+        <form className='constructor--container'>
+            <p className='constructor--text-head'>Monster challenge</p>
+            <label className='constructor--text'>Monster min challenge
                 <select
                     id="minMonsterChallenge"
                     value={props.value.data.minMonsterChallenge}
@@ -48,7 +48,7 @@ export default function Filter(props){
                     <option value="155000">30</option>
                 </select>
             </label>
-            <label className='filter--text'>Monster max challenge
+            <label className='constructor--text'>Monster max challenge
                 <select
                     id="maxMonsterChallenge"
                     value={props.value.data.maxMonsterChallenge}
@@ -92,7 +92,7 @@ export default function Filter(props){
                 </select>
             </label>
 
-            <label className='filter--text'>Monster size
+            <label className='constructor--text'>Monster size
                 <select
                     id="monsterSize"
                     value={props.value.data.monsterSize}
@@ -108,7 +108,7 @@ export default function Filter(props){
                     <option value="Gargantuan">Gargantuan</option>
                 </select>
             </label>
-            <label className='filter--text'>Monster type
+            <label className='constructor--text'>Monster type
                 <select
                     id="monsterType"
                     value={props.value.data.monsterType}
@@ -132,7 +132,7 @@ export default function Filter(props){
                     <option value="undead">undead</option>
                 </select>
             </label>
-            <label className='filter--text'>Monster outlook
+            <label className='constructor--text'>Monster outlook
                 <select
                     id="monsterOutlook"
                     value={props.value.data.monsterOutlook}
@@ -154,7 +154,7 @@ export default function Filter(props){
 
                 </select>
             </label>
-            <label className='filter--text-input'> Homebrew
+            <label className='constructor--text-input'> Homebrew
                 <input
                     type="checkbox"
                     id="isSource"
@@ -163,7 +163,7 @@ export default function Filter(props){
                     name="isSource"
                 />
             </label>
-            <label className='filter--text-input'> Legendary
+            <label className='constructor--text-input'> Legendary
                 <input
                     type="checkbox"
                     id="isLegendaryAction"
@@ -172,7 +172,7 @@ export default function Filter(props){
                     name="isLegendaryAction"
                 />
             </label>
-            <label className='filter--text-input'> Special skills<input
+            <label className='constructor--text-input'> Special skills<input
                     type="checkbox"
                     id="isSpecialSkills"
                     checked={props.value.data.isSpecialSkills}

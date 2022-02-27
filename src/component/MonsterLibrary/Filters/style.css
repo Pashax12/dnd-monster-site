@@ -1,17 +1,17 @@
-.filter--container{
+.constructor--container{
     width: 100%;
     box-sizing: border-box;
     margin: 20px 5px 20px 20px;
 }
 
-.filter--text-head{
+.constructor--text-head{
     display: block;
     font-size: 25px;
     margin: 7px 5px 7px 10px;
 
 
 }
-.filter--text{
+.constructor--text{
 
     margin: 10px 5px 5px 5px;
     width: 100%;
@@ -19,7 +19,7 @@
     display: block;
 
 }
-.filter--text select{
+.constructor--text select{
 
     height: 30px;
     margin: 3px 5px;
@@ -30,7 +30,7 @@
     border: 2px solid #B89D69;
     box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
 }
-.filter--text-input{
+.constructor--text-input{
 
     margin: 10px 5px 5px 5px;
     width: 100%;
@@ -38,7 +38,7 @@
     text-align: center;
     display: block;
 }
-.filter--text-input input{
+.constructor--text-input input{
     width: 20px;
     height: 20px;
     margin: 3px 5px;

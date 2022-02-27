@@ -35,6 +35,7 @@
 }
 
 .library--box-2{
+    height: auto;
     flex-basis: 33%;
     box-sizing: border-box;
     margin: 7px;
@@ -63,6 +64,7 @@ h1,h3{
         justify-content: space-around;
         display: flex;
         margin: 7px;
+        height: 800px;
         flex-wrap: wrap;
         overflow: auto;
         flex-basis: 100%;

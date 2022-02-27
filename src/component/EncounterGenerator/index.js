@@ -3,7 +3,7 @@ import './style.css'
 import axios from "axios";
 import resources from "../../resource.json";
 import {Scrollbars} from "react-custom-scrollbars-2";
-import Block from "./Block/Block";
+import Block from "../Block";
 import {nanoid} from "nanoid";
 import Filter from "./Filters";
 
@@ -64,7 +64,6 @@ export default function EncounterGenerator() {
     }
 
     useEffect(() => {
-        console.log(loadData);
         axios.post(resources.createEncounter, loadData)
             .then(value => {
                 console.log(value);

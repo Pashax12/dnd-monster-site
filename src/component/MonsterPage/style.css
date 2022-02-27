@@ -1,0 +1,24 @@
+.monster--container-view{
+    display: block;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    background:  linear-gradient(to right, #DDC493, #EECC88);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 900px) {
+    .monster--container-view{
+        display: block;
+        width: 90%;
+        align-items: center;
+        margin: auto;
+        padding: 10px;
+        background:  linear-gradient(to right, #DDC493, #EECC88);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        border-radius: 25px;
+        box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+}

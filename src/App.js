@@ -8,9 +8,10 @@ import MonsterLibrary from "./component/MonsterLibrary";
 import MonsterConstructor from "./component/MonsterConstructor";
 import MonsterPage from "./component/MonsterPage";
 import ErrorPage from "./component/ErrorPage";
-
+import Footer from "./component/Footer";
 
 import './App.css';
+
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/monster/:monstername' element={<MonsterPage />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
+        {/*<Footer />*/}
     </Router>
   );
 }

@@ -32,10 +32,13 @@
     font-style: normal;
     font-weight: normal;
     margin: auto;
+    font-size: 40px;
+
 }
 .header--little-text{
     font-family: Ebrima , serif;
     font-style: normal;
     margin: auto;
+    font-size: 20px;
 
 }
