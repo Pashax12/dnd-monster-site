@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import './style.css';
 import axios from "axios";
 import resources from "../../resource.json";
@@ -6,13 +6,13 @@ import resources from "../../resource.json";
 import Constructor from "./Constructor";
 import Monster from "../Monster";
 import {Scrollbars} from "react-custom-scrollbars-2";
-import Block from "../Block";
-import {nanoid} from "nanoid";
 
-export default function MonsterConstructor(){
+export default function MonsterConstructor() {
 
-    const [monsterData, setMonsterData] = React.useState({
-        monsterOwner: "",
+
+
+    const cleanForm = {
+        monsterOwner: "Anonymous",
         name: "",
         meta: "",
         Armor_Class: "",
@@ -39,17 +39,18 @@ export default function MonsterConstructor(){
         Actions: "",
         Legendary_Actions: null,
         img_url: ""
-    });
+    };
 
-    console.log(monsterData);
 
-    function addLast(event){
-        const {name, value} = event.target
-        setMonsterData(prevFormData => {
-            return {
-                ...prevFormData, [name]: [name] +value
-            }
-        })
+    const [monsterData, setMonsterData] = React.useState(cleanForm);
+
+
+    function preventDefault(event) {
+        event.preventDefault();
+    }
+
+    function clean(event) {
+        setMonsterData(cleanForm);
     }
 
 
@@ -61,11 +62,58 @@ export default function MonsterConstructor(){
             }
         })
     }
+    function setMeta(newState) {
+        setMonsterData(prevFormData => {
+            return {
+                ...prevFormData,
+                meta: newState
+            }
+        })
+    }
+    function setLanguage(newState) {
+        setMonsterData(prevFormData => {
+            return {
+                ...prevFormData,
+                Languages: newState
+            }
+        })
+    }
+    function setSpeed(newState) {
+        setMonsterData(prevFormData => {
+            return {
+                ...prevFormData,
+                Speed: newState
+            }
+        })
+    }
+    function setAction(newState) {
+        setMonsterData(prevFormData => {
+            return {
+                ...prevFormData,
+                Actions: newState
+            }
+        })
+    }
+    function setLegendaryAction(newState) {
+        setMonsterData(prevFormData => {
+            return {
+                ...prevFormData,
+                Legendary_Actions: newState
+            }
+        })
+    }
+    function setTraits(newState) {
+        setMonsterData(prevFormData => {
+            return {
+                ...prevFormData,
+                Traits: newState
+            }
+        })
+    }
 
     function generateMonster(event) {
         event.preventDefault();
-
-        axios.post(resources.createEncounter, monsterData)
+        axios.post(resources.addMonster, monsterData)
             .then(value => {
                 alert(value.data);
             })
@@ -73,36 +121,25 @@ export default function MonsterConstructor(){
                 console.log(error);
             });
     }
-/*
-    useEffect(() => {
-        axios.post(resources.createEncounter, loadData)
-            .then(value => {
-                alert('monster added')
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }, );*/
 
-    return (<main className='library--container'>
-        <div className='library--boxes'>
-            <div className='library--box-1'>
+
+    return (<main className='monster-constructor--container'>
+        <div className='monster-constructor--boxes'>
+            <div className='monster-constructor--box-1'>
                 <h1>Monster constructor</h1>
-                {(monsterData  && <Scrollbars
-                    autoHide
-                    universal
-                    autoHeight
-                    autoHeightMin={500}>
-                    <div className='library--contest'>
-                        <Monster data={monsterData}/>
-                    </div>
-                </Scrollbars>)}
-
+                {(monsterData &&<div className='monster-constructor--contest'>
+                    <Monster data={monsterData}/>
+                </div>)}
             </div>
 
-            <div className='library--box-2'>
+            <div className='monster-constructor--box-2'>
                 <h3>Constructor</h3>
-                <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster} />
+
+                <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster} addLast={preventDefault}
+                             cleanAll={clean} metaSetter={setMeta} speedSetter={setSpeed} languagesSetter={setLanguage}
+                             traitsSetter={setTraits} actionSetter={setAction} legendarySetter={setLegendaryAction}/>
+
+
             </div>
         </div>
 

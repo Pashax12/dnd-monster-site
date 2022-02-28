@@ -1,21 +1,24 @@
-.library--container{
+.encounter--container{
     display: block;
     width: 80%;
     margin: auto;
     padding: 10px;
+    font-family: Risque, serif;
+    font-style: normal;
+    font-weight: normal;
     background:  linear-gradient(to right, #DDC493, #EECC88);
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 25px;
     box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.library--boxes{
+.encounter--boxes{
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
     overflow: auto;
 }
 
-.library--contest{
+.encounter--contest{
 
     display: flex;
     margin: 7px;
@@ -24,7 +27,7 @@
     overflow: auto;
 
 }
-.library--box-1{
+.encounter--box-1{
     max-height: 700px;
     margin: 7px;
     flex-basis: 60%;
@@ -32,24 +35,17 @@
     box-sizing: border-box;
 }
 
-.library--box-2{
+.encounter--box-2{
     height: 600px;
     flex-basis: 33%;
     box-sizing: border-box;
     margin: 7px;
 }
 
-h1,h3{
-    width: 100%;
-    margin: 30px;
-    font-family: Risque, serif;
-    font-style: normal;
-    font-weight: normal;
-}
-.library--contest h1{
+.encounter--contest h1{
     font-size: 45px;
 }
-.library--box-2 h3{
+.encounter--box-2 h3{
 
     font-size: 30px;
     margin: 20px;
@@ -58,7 +54,7 @@ h1,h3{
 
 @media (max-width: 1000px) {
 
-    .library--box-1{
+    .encounter--box-1{
         justify-content: space-around;
         display: flex;
         margin: 7px;

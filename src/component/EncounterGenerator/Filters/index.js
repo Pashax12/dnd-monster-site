@@ -4,8 +4,8 @@ import {nanoid} from "nanoid";
 
 export default function Filter(props) {
     return (
-        <form className='constructor--container' onSubmit={props.value.gener}>
-            <label className='constructor--text'>Player level
+        <form className='generator--container' onSubmit={props.value.gener}>
+            <label className='generator--text'>Player level
                 <select
                     id="playerLevel"
                     value={props.value.data.playerLevel}
@@ -36,7 +36,7 @@ export default function Filter(props) {
                 </select>
             </label>
 
-            <label className='constructor--text'>Player class
+            <label className='generator--text'>Player class
                 <select
                     id="playerClass"
                     value={props.value.data.playerClass}
@@ -56,20 +56,20 @@ export default function Filter(props) {
                     <option value="Paladin">Paladin</option>
                 </select>
             </label>
-            <button className='constructor--button' onClick={props.value.add}>Add</button>
-            <button className='constructor--button' onClick={props.value.del}>Delete last</button>
-            <div className='filter--player-block-container'
+            <button className='generator--button' onClick={props.value.add}>Add</button>
+            <button className='generator--button' onClick={props.value.del}>Delete last</button>
+            <div className='generator--player-block-container'
                  id="fightParty"
                  value={props.value.data.fightParty}
                  onChange={props.value.change}
                  name="fightParty">
                 {props.value.data.fightParty.map(value =>
-                    <div key={nanoid()} className='filter--player-block'>
+                    <div key={nanoid()} className='generator--player-block'>
                         {value}
                     </div>)}
             </div>
 
-            <label className='constructor--text'>Fight challenge
+            <label className='generator--text'>Fight challenge
                 <select
                     id="fightChallenge"
                     value={props.value.data.fightChallenge}
@@ -84,7 +84,7 @@ export default function Filter(props) {
                 </select>
             </label>
 
-            <label className='constructor--text-input'> One type?
+            <label className='generator--text-input'> One type?
                 <input
                     type="checkbox"
                     id="isMixedType"
@@ -93,7 +93,7 @@ export default function Filter(props) {
                     name="isMixedType"
                 />
             </label>
-            <button className='constructor--button-generate'>Generate encounter</button>
+            <button className='generator--button-generate'>Generate encounter</button>
         </form>
     )
 }

@@ -3,13 +3,13 @@
     flex-direction: column;
     width: 100%;
     padding: 10px;
-    margin: auto;
+    margin: auto 10px 10px;
     font-family: Risque, serif;
     font-style: normal;
     font-weight: normal;
     box-sizing: border-box;
     box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(0deg, rgba(239, 196, 111, 0.2), rgba(239, 196, 111, 0.2)), rgba(251, 242, 225, 0.5);
+    background: #EECC88;
     border: 3px solid rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
@@ -75,7 +75,7 @@
 
 .monster--table{
     text-align: center;
-    width:auto px;
+    width:auto;
     margin: 5px auto;
     display:inline-block;
     padding: 3px;
@@ -118,7 +118,7 @@
     .monster--table{
         text-align: center;
         width:230px;
-        font-size: 11px;
+        font-size: 14px;
         margin: 5px auto;
         display:inline-block;
         padding: 3px;
@@ -145,6 +145,21 @@
         box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.3);
         background: #DDC493;
         border: 3px solid rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+    .monster--container-view{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+
+        font-family: Risque, serif;
+        font-style: normal;
+        font-weight: normal;
+        box-sizing: border-box;
+        box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.3);
+        background: #EECC88;
+        border: 2px solid rgba(0, 0, 0, 0.5);
         border-radius: 20px;
     }
 }

@@ -26,7 +26,7 @@ function App() {
         <Route path='/monster/:monstername' element={<MonsterPage />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
-        {/*<Footer />*/}
+      <Footer />
     </Router>
   );
 }

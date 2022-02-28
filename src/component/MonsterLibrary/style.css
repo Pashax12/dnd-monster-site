@@ -1,8 +1,6 @@
 .library--container{
     display: block;
     width: 80%;
-    scrollbar-color: #E0CDA7, #EECC88;     /* «цвет ползунка» «цвет полосы скроллбара» */
-    scrollbar-width: none;
     margin: auto;
     padding: 10px;
     background:  linear-gradient(to right, #DDC493, #EECC88);
@@ -47,6 +45,7 @@ h1,h3{
     font-family: Risque, serif;
     font-style: normal;
     font-weight: normal;
+
 }
 .library--contest h1{
     font-size: 45px;

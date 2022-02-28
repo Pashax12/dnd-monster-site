@@ -8,7 +8,7 @@ export default function Block(props){
             <h4 className='block--name'>{props.value.monsterName}</h4>
             <p className='block--meta'>Challenge: {props.value.monsterChallenge}</p>
             <p className='block--meta'>Meta: {props.value.monsterMeta}</p>
-            <Link to={'/monster/'+props.value.monsterName} className='block--challenge'><p className='block--meta'>check this monster</p></Link>
+            <Link to={'/monster/'+props.value.monsterName} className='block--link'><p className='block--meta'>check this monster</p></Link>
         </div>
     )
 }

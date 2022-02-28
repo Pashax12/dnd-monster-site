@@ -23,26 +23,26 @@ export default function Monster(props) {
                 <h4 className='monster--text-data'>Skills: {props.data.Skills || 'No special skills'}</h4>
             </div>
             <table className='monster--table'>
-                <tr>
+                <tbody>
                     <td>
                         <div>STR</div>
-                        {`${props.data.STR} ${props.data.STR_mod}`}</td>
+                        {props.data.STR &&(`${props.data.STR} ${props.data.STR_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>DEX</div>
-                        {`${props.data.DEX} ${props.data.DEX_mod}`}</td>
+                        {props.data.DEX&&(`${props.data.DEX} ${props.data.DEX_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>CON</div>
-                        {`${props.data.CON} ${props.data.CON_mod}`}</td>
+                        {props.data.CON&&(`${props.data.CON} ${props.data.CON_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>INT</div>
-                        {`${props.data.INT} ${props.data.INT_mod}`}</td>
+                        {props.data.INT&&(`${props.data.INT} ${props.data.INT_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>WIS</div>
-                        {`${props.data.WIS} ${props.data.WIS_mod}`}</td>
+                        {props.data.WIS&&(`${props.data.WIS} ${props.data.WIS_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>CHA</div>
-                        {`${props.data.CHA} ${props.data.CHA_mod}`}</td>
-                </tr>
+                        {props.data.CHA&&(`${props.data.CHA} ${props.data.CHA_mod}`)}</td>
+                </tbody>
             </table>
             <div className='monster--text-inline'>
                 <h4 className='monster--text-data'>Languages: {props.data.Languages || 'No one language'}</h4>

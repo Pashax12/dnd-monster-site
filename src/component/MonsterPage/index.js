@@ -22,7 +22,7 @@ export default function MonsterPage() {
     console.log(monsterData);
 
     return (
-        <div>
+        <div className='monster--view-container'>
             {(monsterData!==undefined  && <Monster data={monsterData}/>)|| <h3>Loading data</h3>}
         </div>
     )

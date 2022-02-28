@@ -74,20 +74,20 @@ export default function EncounterGenerator() {
             });
     }, [loadData, setMonster]);
 
-    return (<main className='library--container'>
-            <div className='library--boxes'>
-                <div className='library--box-1'><h1>Create Encounter</h1>
+    return (<main className='encounter--container'>
+            <div className='encounter--boxes'>
+                <div className='encounter--box-1'><h1>Create Encounter</h1>
                     {(monsters.length > 1 && <Scrollbars
                         autoHide
                         universal
                         autoHeight
                         autoHeightMin={500}>
-                        <div className='library--contest'>
+                        <div className='encounter--contest'>
                             {monsters.map(value => <Block key={nanoid()} value={value}/>)}
                         </div>
                     </Scrollbars>)}</div>
 
-                <div className='library--box-2'>
+                <div className='encounter--box-2'>
                     <h3>Encounter filters</h3>
                     <Filter value={{
                         data: formData, change: handleChange, add: handleAdd, del: handleDel, gener: generateEncounter

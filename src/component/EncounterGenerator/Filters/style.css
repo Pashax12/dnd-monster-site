@@ -1,22 +1,22 @@
-.constructor--container{
+.generator--container{
     width: 100%;
     box-sizing: border-box;
     margin: 20px 5px 20px 20px;
 }
 
-.constructor--text-head{
+.generator--text-head{
     display: block;
     font-size: 25px;
     margin: 7px 5px 7px 10px;
 }
-.constructor--text{
+.generator--text{
     margin: 10px 5px 5px 5px;
     width: 100%;
     font-size: 20px;
     display: block;
 
 }
-.constructor--text select{
+.generator--text select{
 
     height: 30px;
     margin: 3px 5px;
@@ -27,7 +27,7 @@
     border: 2px solid #B89D69;
     box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
 }
-.constructor--text-input{
+.generator--text-input{
 
     margin: 10px 5px 5px 5px;
     width: 100%;
@@ -35,7 +35,7 @@
     text-align: center;
     display: block;
 }
-.constructor--text-input input{
+.generator--text-input input{
     width: 20px;
     height: 20px;
     margin: 3px 5px;
@@ -45,7 +45,7 @@
     border: 2px solid #B89D69;
     box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
 }
-.constructor--button{
+.generator--button{
     margin: 10px 5px 5px 5px;
     width: 30%;
     background-color: #EECC88;
@@ -53,7 +53,7 @@
     box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
-.filter--player-block{
+.generator--player-block{
     width: 30%;
     margin: 10px 5px 5px 5px;
     padding: 3px;
@@ -63,7 +63,7 @@
     border-radius: 10px;
     text-align: center;
 }
-.filter--player-block-container{
+.generator--player-block-container{
     margin: 10px 5px 5px 5px;
     width: 100%;
     font-size: 20px;
@@ -73,7 +73,7 @@
     overflow: auto;
     justify-content: center;
 }
-.constructor--button-generate{
+.generator--button-generate{
 
     margin: 10px 5px 5px 5px;
     font-size: 15px;
