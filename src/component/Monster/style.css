@@ -128,7 +128,7 @@
         border-radius: 20px;
     }
     .monster--text-data{
-        margin: 10px;
+        margin: 7px;
         font-size: 14px;
         box-sizing: border-box;
         font-weight: normal;
@@ -137,7 +137,7 @@
     .monster--block{
         display: block;
         width: 95%;
-        margin: 10px auto;
+        margin: 7px auto;
         padding: 3px 5px;
         font-size: 8px;
         box-sizing: border-box;
@@ -152,7 +152,6 @@
         flex-direction: column;
         width: 100%;
         padding: 10px;
-
         font-family: Risque, serif;
         font-style: normal;
         font-weight: normal;

@@ -1,8 +1,6 @@
 .constructor--container{
-
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
-    margin: 20px 5px 20px 20px;
 }
 
 .constructor--text-head{
@@ -91,7 +89,7 @@
 }
 .constructor--table{
     display: flex;
-    width: auto;
+    width: 100%;
     text-align: center;
     margin: 5px auto;
     padding: 3px;
@@ -99,6 +97,7 @@
     background: linear-gradient(0deg, rgba(222, 179, 97, 0.67),#D9B161);
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 20px;
+    box-sizing: border-box;
 }
 .constructor--placeholder-stat{
     width: 40%;

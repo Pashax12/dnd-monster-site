@@ -19,9 +19,9 @@ export default function MonsterLibrary(){
             minMonsterChallenge:'10',
             maxMonsterChallenge:'155000',
             monsterOutlook:'',
-            isSource:false,
-            isLegendaryAction:false,
-            isSpecialSkills:false
+            source:false,
+            legendaryAction:false,
+            specialSkills:false
         }
     )
 
@@ -36,8 +36,10 @@ export default function MonsterLibrary(){
     }
 
     useEffect(() => {
+        console.log(formData);
        axios.post(resources.postCriteria, formData)
             .then(value => {
+                console.log(value.data);
                 return setMonster(value.data)
             })
             .catch(function (error) {

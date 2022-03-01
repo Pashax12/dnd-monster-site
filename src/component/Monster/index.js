@@ -24,24 +24,26 @@ export default function Monster(props) {
             </div>
             <table className='monster--table'>
                 <tbody>
+                <tr>
                     <td>
                         <div>STR</div>
-                        {props.data.STR &&(`${props.data.STR} ${props.data.STR_mod}`)}</td>
+                        {props.data.STR && (`${props.data.STR} ${props.data.STR_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>DEX</div>
-                        {props.data.DEX&&(`${props.data.DEX} ${props.data.DEX_mod}`)}</td>
+                        {props.data.DEX && (`${props.data.DEX} ${props.data.DEX_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>CON</div>
-                        {props.data.CON&&(`${props.data.CON} ${props.data.CON_mod}`)}</td>
+                        {props.data.CON && (`${props.data.CON} ${props.data.CON_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>INT</div>
-                        {props.data.INT&&(`${props.data.INT} ${props.data.INT_mod}`)}</td>
+                        {props.data.INT && (`${props.data.INT} ${props.data.INT_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>WIS</div>
-                        {props.data.WIS&&(`${props.data.WIS} ${props.data.WIS_mod}`)}</td>
+                        {props.data.WIS && (`${props.data.WIS} ${props.data.WIS_mod}`)}</td>
                     <td className='monster--table-tr'>
                         <div>CHA</div>
-                        {props.data.CHA&&(`${props.data.CHA} ${props.data.CHA_mod}`)}</td>
+                        {props.data.CHA && (`${props.data.CHA} ${props.data.CHA_mod}`)}</td>
+                </tr>
                 </tbody>
             </table>
             <div className='monster--text-inline'>
@@ -63,7 +65,8 @@ export default function Monster(props) {
             <div className='monster--text-inline'>
                 <h4 className='monster--text-data'>Legendary Actions:</h4>
                 {(props.data.Legendary_Actions &&
-                        <div className='monster--block' dangerouslySetInnerHTML={{__html: props.data.Legendary_Actions}}/>) ||
+                        <div className='monster--block'
+                             dangerouslySetInnerHTML={{__html: props.data.Legendary_Actions}}/>) ||
                     <div className='monster--block'>No legendary actions found</div>}
             </div>
             {/*<Link to={'/monster/'+props.value.name} className='block--challenge'><p className='block--meta'>check this monster</p></Link>*/}

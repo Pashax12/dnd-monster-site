@@ -29,5 +29,5 @@
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 
 }
-.navigation--button:hover { background:#DDC493; }
-.navigation--button:active { background:#B89D69; }
+button:hover { background:#E8D0A2; }
+button:active { background:#B89D69; }

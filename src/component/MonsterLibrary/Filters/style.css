@@ -13,17 +13,17 @@
 
     margin: 10px 5px 5px 5px;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     display: block;
 
 }
 .filter--text select{
 
-    height: 30px;
+    height: 25px;
     margin: 3px 5px;
     border-radius: 13px;
     cursor: pointer;
-    width: 50%;
+    width: 30%;
     background-color: #EECC88;
     border: 2px solid #B89D69;
     box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
@@ -32,7 +32,7 @@
 
     margin: 10px 5px 5px 5px;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     display: block;
 }

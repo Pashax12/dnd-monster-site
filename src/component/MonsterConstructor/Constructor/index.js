@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './style.css';
+import {Scrollbars} from "react-custom-scrollbars-2";
 
 
 export default function Constructor(props) {
@@ -508,6 +509,5 @@ export default function Constructor(props) {
             <button className='constructor--button-generate' onClick={props.cleanAll}>Clean all</button>
             <button className='constructor--button-onSubmit' onClick={props.onSubmit}>send monster</button>
             </form>
-
     )
 }

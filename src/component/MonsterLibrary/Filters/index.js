@@ -157,27 +157,27 @@ export default function Filter(props){
             <label className='filter--text-input'> Homebrew
                 <input
                     type="checkbox"
-                    id="isSource"
-                    checked={props.value.data.isSource}
+                    id="source"
+                    checked={props.value.data.source}
                     onChange={props.value.change}
-                    name="isSource"
+                    name="source"
                 />
             </label>
             <label className='filter--text-input'> Legendary
                 <input
                     type="checkbox"
-                    id="isLegendaryAction"
-                    checked={props.value.data.isLegendaryAction}
+                    id="legendaryAction"
+                    checked={props.value.data.legendaryAction}
                     onChange={props.value.change}
-                    name="isLegendaryAction"
+                    name="legendaryAction"
                 />
             </label>
             <label className='filter--text-input'> Special skills<input
                     type="checkbox"
-                    id="isSpecialSkills"
-                    checked={props.value.data.isSpecialSkills}
+                    id="specialSkills"
+                    checked={props.value.data.specialSkills}
                     onChange={props.value.change}
-                    name="isSpecialSkills"
+                    name="specialSkills"
                 />
             </label>
         </form>

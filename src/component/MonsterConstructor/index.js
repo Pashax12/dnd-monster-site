@@ -10,7 +10,6 @@ import {Scrollbars} from "react-custom-scrollbars-2";
 export default function MonsterConstructor() {
 
 
-
     const cleanForm = {
         monsterOwner: "Anonymous",
         name: "",
@@ -62,6 +61,7 @@ export default function MonsterConstructor() {
             }
         })
     }
+
     function setMeta(newState) {
         setMonsterData(prevFormData => {
             return {
@@ -70,6 +70,7 @@ export default function MonsterConstructor() {
             }
         })
     }
+
     function setLanguage(newState) {
         setMonsterData(prevFormData => {
             return {
@@ -78,6 +79,7 @@ export default function MonsterConstructor() {
             }
         })
     }
+
     function setSpeed(newState) {
         setMonsterData(prevFormData => {
             return {
@@ -86,6 +88,7 @@ export default function MonsterConstructor() {
             }
         })
     }
+
     function setAction(newState) {
         setMonsterData(prevFormData => {
             return {
@@ -94,6 +97,7 @@ export default function MonsterConstructor() {
             }
         })
     }
+
     function setLegendaryAction(newState) {
         setMonsterData(prevFormData => {
             return {
@@ -102,6 +106,7 @@ export default function MonsterConstructor() {
             }
         })
     }
+
     function setTraits(newState) {
         setMonsterData(prevFormData => {
             return {
@@ -127,20 +132,25 @@ export default function MonsterConstructor() {
         <div className='monster-constructor--boxes'>
             <div className='monster-constructor--box-1'>
                 <h1>Monster constructor</h1>
-                {(monsterData &&<div className='monster-constructor--contest'>
+                {(monsterData && <div className='monster-constructor--contest'>
                     <Monster data={monsterData}/>
                 </div>)}
             </div>
 
             <div className='monster-constructor--box-2'>
                 <h3>Constructor</h3>
+                <Scrollbars
+                    hideTracksWhenNotNeeded
 
-                <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster} addLast={preventDefault}
+                >
+
+                <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster}
+                             addLast={preventDefault}
                              cleanAll={clean} metaSetter={setMeta} speedSetter={setSpeed} languagesSetter={setLanguage}
                              traitsSetter={setTraits} actionSetter={setAction} legendarySetter={setLegendaryAction}/>
-
-
+                </Scrollbars>
             </div>
+
         </div>
 
     </main>)
