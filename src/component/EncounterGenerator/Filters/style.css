@@ -1,0 +1,85 @@
+.generator--container{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 5px 20px 20px;
+}
+
+.generator--text-head{
+    display: block;
+    font-size: 25px;
+    margin: 7px 5px 7px 10px;
+}
+.generator--text{
+    margin: 10px 5px 5px 5px;
+    width: 100%;
+    font-size: 20px;
+    display: block;
+
+}
+.generator--text select{
+
+    height: 25px;
+    margin: 3px 5px;
+    border-radius: 13px;
+    cursor: pointer;
+    width: auto;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.generator--text-input{
+
+    margin: 10px 5px 5px 5px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+.generator--text-input input{
+    width: 20px;
+    height: 20px;
+    margin: 3px 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.generator--button{
+    margin: 10px 5px 5px 5px;
+    width: 30%;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.generator--player-block{
+    width: 30%;
+    margin: 10px 5px 5px 5px;
+    padding: 3px;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+.generator--player-block-container{
+    margin: 10px 5px 3px;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+}
+.generator--button-generate{
+
+    margin: 10px 5px 5px 5px;
+    font-size: 15px;
+    width: 50%;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}

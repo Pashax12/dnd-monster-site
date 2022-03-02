@@ -1,0 +1,68 @@
+.encounter--container{
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    font-family: Risque, serif;
+    font-style: normal;
+    font-weight: normal;
+    background:  linear-gradient(to right, #DDC493, #EECC88);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.encounter--boxes{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.encounter--contest{
+
+    display: flex;
+    margin: 7px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+.encounter--box-1{
+    max-height: 700px;
+    margin: 7px;
+    flex-basis: 60%;
+    border-right: 2px solid rgba(65,55,68,0.74);
+    box-sizing: border-box;
+}
+
+.encounter--box-2{
+    height: 600px;
+    flex-basis: 33%;
+    box-sizing: border-box;
+    margin: 7px;
+}
+
+.encounter--contest h1{
+    font-size: 45px;
+}
+.encounter--box-2 h3{
+
+    font-size: 30px;
+    margin: 20px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .encounter--box-1{
+        justify-content: space-around;
+        display: flex;
+        margin: 7px;
+        flex-wrap: wrap;
+        overflow: auto;
+        flex-basis: 100%;
+        border-right:  0;
+        border-bottom:  2px solid rgba(65,55,68,0.74);
+        box-sizing: border-box;
+    }
+}

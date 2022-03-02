@@ -1,0 +1,32 @@
+.article--container{
+    display: block;
+    background: #EECC88;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.6);
+}
+.article--title{
+    margin: 2px 7px ;
+    text-align: center;
+    font-size: 25px;
+}
+.article--short{
+    margin:2px 7px;
+}
+.article--data{
+    text-align: right;
+    margin: 2px 10px;
+}
+.news--link{
+    margin: 2px 10px 5px;
+    color: #987c41;
+    text-decoration: none;
+}
+.news--link:hover{
+    color: #B89D69;
+    text-decoration: none;
+}

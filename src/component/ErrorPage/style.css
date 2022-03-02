@@ -1,0 +1,25 @@
+.ErrorPage--block{
+    height: 100vh;
+}
+.ErrorPage--text{
+    display: block;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    font-family: Risque, serif;
+    font-style: normal;
+    font-weight: normal;
+    background:  linear-gradient(to right, #DDC493, #EECC88);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.ErrorPage--link{
+    color: #987c41;
+    text-decoration: none;
+}
+.ErrorPage--link:hover{
+    color: #B89D69;
+    text-decoration: none;
+}

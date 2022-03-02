@@ -1,4 +1,4 @@
 body{
-    background: url("img/dndSiteProject.png") no-repeat;
-    background-size: 100%;
+    background: url("img/dndSiteProject.png") no-repeat fixed center top;
+    background-size: cover;
 }

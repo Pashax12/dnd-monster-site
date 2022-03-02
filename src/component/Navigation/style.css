@@ -1,0 +1,33 @@
+.navigation--container{
+    display: inline-flex;
+    width: 80%;
+    margin:  5px 10% ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+    box-sizing: border-box;
+
+}
+
+.navigation--link{
+    width: 270px;
+    height: 50px;
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+}
+.navigation--button{
+    width: 100%;
+    height: 100%;
+    font-family: Risque, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    background:  linear-gradient(to right, #E8D0A2, #EECC88);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+
+}
+button:hover { background:#E8D0A2; }
+button:active { background:#B89D69; }

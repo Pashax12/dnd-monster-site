@@ -1,0 +1,109 @@
+.constructor--container{
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.constructor--text-head{
+    display: block;
+    font-size: 25px;
+    margin: 5px 7px;
+}
+.constructor--text{
+    margin: 5px 5px ;
+    width: 100%;
+    font-size: 15px;
+    display: inline-block;
+
+}
+.constructor--placeholder{
+    width: 80%;
+    margin: 7px 5px;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+
+.constructor--text select{
+
+    height: 30px;
+    margin: 3px 5px;
+    border-radius: 13px;
+    cursor: pointer;
+    width: auto;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.constructor--text-input{
+    margin: 10px 0;
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+    display: block;
+}
+.constructor--text-input-inline{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+.constructor--text-input input{
+    width: auto;
+    height: 20px;
+    margin: 3px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.constructor--text-input textarea{
+    width: 100%;
+    height: 40px;
+    margin: 3px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.constructor--button-generate{
+
+    margin: 5px 0;
+    font-size: 15px;
+    width: auto;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.constructor--button-onSubmit{
+    margin: 10px 5px 5px 5px;
+    font-size: 15px;
+    width: 50%;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.constructor--table{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: 5px auto;
+    padding: 3px;
+    box-shadow: 7px 5px 3px rgba(80, 56, 40, 0.27);
+    background: linear-gradient(0deg, rgba(222, 179, 97, 0.67),#D9B161);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.constructor--placeholder-stat{
+    width: 40%;
+    margin: 7px 5px;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}

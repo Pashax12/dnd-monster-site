@@ -1,0 +1,12 @@
+.monster--view-container{
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
+@media (max-width: 900px) {
+    .monster--view-container{
+        width: 90%;
+        align-items: center;
+        margin: auto;
+    }
+}
