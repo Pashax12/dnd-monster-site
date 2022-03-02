@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import './style.css';
-import {Scrollbars} from "react-custom-scrollbars-2";
 
 
 export default function Constructor(props) {
@@ -69,68 +68,68 @@ export default function Constructor(props) {
                 />
             </label>
             <div className='constructor--text-input-inline'>
-            <label className='constructor--text'>Monster size
-                <select
-                    id="size"
-                    value={meta.size}
-                    onChange={metaChange}
-                    name="size"
-                >
-                    <option value="">Not chosen</option>
-                    <option value="Tiny">Tiny</option>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                    <option value="Huge">Huge</option>
-                    <option value="Gargantuan">Gargantuan</option>
-                </select>
-            </label>
-            <label className='constructor--text'>Monster type
-                <select
-                    id="type"
-                    value={meta.type}
-                    onChange={metaChange}
-                    name="type"
-                >
-                    <option value="">Not chosen</option>
-                    <option value="humanoid">humanoid</option>
-                    <option value="aberration">aberration</option>
-                    <option value="beast">beast</option>
-                    <option value="celestial">celestial</option>
-                    <option value="construct">construct</option>
-                    <option value="dragon">dragon</option>
-                    <option value="elemental">elemental</option>
-                    <option value="fey">fey</option>
-                    <option value="fiend">fiend</option>
-                    <option value="giant">giant</option>
-                    <option value="monstrosity">monstrosity</option>
-                    <option value="ooze">ooze</option>
-                    <option value="plant">plant</option>
-                    <option value="undead">undead</option>
-                </select>
-            </label>
-            <label className='constructor--text'>Monster outlook
-                <select
-                    id="outlook"
-                    value={meta.outlook}
-                    onChange={metaChange}
-                    name="outlook"
-                >
-                    <option value="">Not chosen</option>
-                    <option value="any">any</option>
-                    <option value="unaligned">unaligned</option>
-                    <option value="lawful  good">lawful good</option>
-                    <option value="neutral good">neutral good</option>
-                    <option value="chaotic good">chaotic good</option>
-                    <option value="lawful  neutral">lawful neutral</option>
-                    <option value="neutral">neutral</option>
-                    <option value="chaotic neutral">chaotic neutral</option>
-                    <option value="lawful  evil">lawful evil</option>
-                    <option value="neutral evil">neutral evil</option>
-                    <option value="chaotic evil">chaotic evil</option>
-                </select>
-                <button className='constructor--button-generate' onClick={addMeta}>+</button>
-            </label>
+                <label className='constructor--text'>Monster size
+                    <select
+                        id="size"
+                        value={meta.size}
+                        onChange={metaChange}
+                        name="size"
+                    >
+                        <option value="">Not chosen</option>
+                        <option value="Tiny">Tiny</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Huge">Huge</option>
+                        <option value="Gargantuan">Gargantuan</option>
+                    </select>
+                </label>
+                <label className='constructor--text'>Monster type
+                    <select
+                        id="type"
+                        value={meta.type}
+                        onChange={metaChange}
+                        name="type"
+                    >
+                        <option value="">Not chosen</option>
+                        <option value="humanoid">humanoid</option>
+                        <option value="aberration">aberration</option>
+                        <option value="beast">beast</option>
+                        <option value="celestial">celestial</option>
+                        <option value="construct">construct</option>
+                        <option value="dragon">dragon</option>
+                        <option value="elemental">elemental</option>
+                        <option value="fey">fey</option>
+                        <option value="fiend">fiend</option>
+                        <option value="giant">giant</option>
+                        <option value="monstrosity">monstrosity</option>
+                        <option value="ooze">ooze</option>
+                        <option value="plant">plant</option>
+                        <option value="undead">undead</option>
+                    </select>
+                </label>
+                <label className='constructor--text'>Monster outlook
+                    <select
+                        id="outlook"
+                        value={meta.outlook}
+                        onChange={metaChange}
+                        name="outlook"
+                    >
+                        <option value="">Not chosen</option>
+                        <option value="any">any</option>
+                        <option value="unaligned">unaligned</option>
+                        <option value="lawful  good">lawful good</option>
+                        <option value="neutral good">neutral good</option>
+                        <option value="chaotic good">chaotic good</option>
+                        <option value="lawful  neutral">lawful neutral</option>
+                        <option value="neutral">neutral</option>
+                        <option value="chaotic neutral">chaotic neutral</option>
+                        <option value="lawful  evil">lawful evil</option>
+                        <option value="neutral evil">neutral evil</option>
+                        <option value="chaotic evil">chaotic evil</option>
+                    </select>
+                    <button className='constructor--button-generate' onClick={addMeta}>+</button>
+                </label>
 
             </div>
             <label className='constructor--text'>Monster armour
@@ -268,120 +267,123 @@ export default function Constructor(props) {
             <label className='constructor--text'>Characteristic table:</label>
             <table className='constructor--table'>
                 <tbody>
-                    <div>STR</div>
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="STR"
-                        onChange={props.onChange}
-                        name="STR"
-                        value={props.data.STR}
-                    />
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="STR_mod"
-                        onChange={props.onChange}
-                        name="STR_mod"
-                        value={props.data.STR_mod}
-                    />
+                <tr>
+                    <td>
+                        <div>STR</div>
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="STR"
+                            onChange={props.onChange}
+                            name="STR"
+                            value={props.data.STR}
+                        />
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="STR_mod"
+                            onChange={props.onChange}
+                            name="STR_mod"
+                            value={props.data.STR_mod}
+                        />
+                    </td>
+                    <td className='monster--table-tr'>
+                        <div>DEX</div>
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="DEX"
+                            onChange={props.onChange}
+                            name="DEX"
+                            value={props.data.DEX}
+                        />
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="DEX_mod"
+                            onChange={props.onChange}
+                            name="DEX_mod"
+                            value={props.data.DEX_mod}
+                        />
+                    </td>
+                    <td className='monster--table-tr'>
+                        <div>CON</div>
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="CON"
+                            onChange={props.onChange}
+                            name="CON"
+                            value={props.data.CON}
+                        />
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="CON_mod"
+                            onChange={props.onChange}
+                            name="CON_mod"
+                            value={props.data.CON_mod}
+                        />
+                    </td>
+                    <td className='monster--table-tr'>
+                        <div>INT</div>
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="INT"
+                            onChange={props.onChange}
+                            name="INT"
+                            value={props.data.INT}
+                        />
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="INT_mod"
+                            onChange={props.onChange}
+                            name="INT_mod"
+                            value={props.data.INT_mod}
+                        />
+                    </td>
+                    <td className='monster--table-tr'>
+                        <div>WIS</div>
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="WIS"
+                            onChange={props.onChange}
+                            name="WIS"
+                            value={props.data.WIS}
+                        />
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="WIS_mod"
+                            onChange={props.onChange}
+                            name="WIS_mod"
+                            value={props.data.WIS_mod}
+                        />
+                    </td>
+                    <td className='monster--table-tr'>
+                        <div>CHA</div>
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="CHA"
+                            onChange={props.onChange}
+                            name="CHA"
+                            value={props.data.CHA}
+                        />
+                        <input
+                            type="text"
+                            className='constructor--placeholder-stat'
+                            placeholder="CHA_mod"
+                            onChange={props.onChange}
+                            name="CHA_mod"
+                            value={props.data.CHA_mod}
+                        />
+                    </td>
+                </tr>
                 </tbody>
-                <tbody className='monster--table-tr'>
-                    <div>DEX</div>
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="DEX"
-                        onChange={props.onChange}
-                        name="DEX"
-                        value={props.data.DEX}
-                    />
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="DEX_mod"
-                        onChange={props.onChange}
-                        name="DEX_mod"
-                        value={props.data.DEX_mod}
-                    />
-                </tbody>
-                <tbody className='monster--table-tr'>
-                    <div>CON</div>
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="CON"
-                        onChange={props.onChange}
-                        name="CON"
-                        value={props.data.CON}
-                    />
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="CON_mod"
-                        onChange={props.onChange}
-                        name="CON_mod"
-                        value={props.data.CON_mod}
-                    />
-                </tbody>
-                <tbody className='monster--table-tr'>
-                    <div>INT</div>
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="INT"
-                        onChange={props.onChange}
-                        name="INT"
-                        value={props.data.INT}
-                    />
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="INT_mod"
-                        onChange={props.onChange}
-                        name="INT_mod"
-                        value={props.data.INT_mod}
-                    />
-                </tbody>
-                <tbody className='monster--table-tr'>
-                    <div>WIS</div>
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="WIS"
-                        onChange={props.onChange}
-                        name="WIS"
-                        value={props.data.WIS}
-                    />
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="WIS_mod"
-                        onChange={props.onChange}
-                        name="WIS_mod"
-                        value={props.data.WIS_mod}
-                    />
-                </tbody>
-                <tbody className='monster--table-tr'>
-                    <div>CHA</div>
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="CHA"
-                        onChange={props.onChange}
-                        name="CHA"
-                        value={props.data.CHA}
-                    />
-                    <input
-                        type="text"
-                        className='constructor--placeholder-stat'
-                        placeholder="CHA_mod"
-                        onChange={props.onChange}
-                        name="CHA_mod"
-                        value={props.data.CHA_mod}
-                    />
-                </tbody>
-
             </table>
 
 
@@ -475,7 +477,7 @@ export default function Constructor(props) {
                 />
             </label>
             <button className='constructor--button-generate' onClick={addAction}>add action</button>
-            <label className='constructor--text'>Legendary action  name:
+            <label className='constructor--text'>Legendary action name:
                 <input
                     type="text"
                     className='constructor--placeholder'
@@ -508,6 +510,6 @@ export default function Constructor(props) {
             </label>
             <button className='constructor--button-generate' onClick={props.cleanAll}>Clean all</button>
             <button className='constructor--button-onSubmit' onClick={props.onSubmit}>send monster</button>
-            </form>
+        </form>
     )
 }
