@@ -1,11 +1,16 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { nanoid } from 'nanoid'
 import './style.css';
 import Short from "./News/Short";
+import axios from "axios";
+import resource from "../../resource.json"
 
 export default function Home() {
-    //At soon i will take it from server
     const [news, setNews] = useState([]);
+
+    useEffect(() =>{
+        axios.get(resource.getNews).then(value => setNews(value.data));
+    },[setNews]);
 
     return (
         <main className='home--container'>

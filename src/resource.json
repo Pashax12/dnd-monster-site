@@ -2,5 +2,6 @@
   "postCriteria":"http://localhost:8080/monsterlibrary",
   "createEncounter":"http://localhost:8080/createencounter",
   "getMonster":"http://localhost:8080/monsterlibrary/",
-  "addMonster": "http://localhost:8080/usermonster"
+  "addMonster": "http://localhost:8080/usermonster",
+  "getNews":"http://localhost:8080/news"
 }
