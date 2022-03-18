@@ -3,8 +3,7 @@ import './style.css';
 import {nanoid} from "nanoid";
 
 export default function Filter(props) {
-    return (
-        <form className='generator--container' onSubmit={props.value.gener}>
+    return (<form className='generator--container' onSubmit={props.value.gener}>
             <label className='generator--text'>Player level
                 <select
                     id="playerLevel"
@@ -63,10 +62,9 @@ export default function Filter(props) {
                  value={props.value.data.fightParty}
                  onChange={props.value.change}
                  name="fightParty">
-                {props.value.data.fightParty.map(value =>
-                    <div key={nanoid()} className='generator--player-block'>
-                        {value}
-                    </div>)}
+                {props.value.data.fightParty.map(value => <div key={nanoid()} className='generator--player-block'>
+                    {value}
+                </div>)}
             </div>
 
             <label className='generator--text'>Fight challenge
@@ -94,6 +92,5 @@ export default function Filter(props) {
                 />
             </label>
             <button className='generator--button-generate'>Generate encounter</button>
-        </form>
-    )
+        </form>)
 }

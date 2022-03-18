@@ -54,7 +54,6 @@ export default function Constructor(props) {
     }
 
     return (
-
         <form className='constructor--container' onSubmit={props.addLast}>
 
             <label className='constructor--text'>Monster name
@@ -213,8 +212,6 @@ export default function Constructor(props) {
                     <option value="155000">30</option>
                 </select>
             </label>
-
-            {/*----------------Monster Speed----------------*/}
 
             <label className='constructor--text'>Monster biom speed
                 <input

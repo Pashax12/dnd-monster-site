@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 import Header from "./component/Header";
 import Navigation from "./component/Navigation";
@@ -11,7 +11,6 @@ import ErrorPage from "./component/ErrorPage";
 import Footer from "./component/Footer";
 import Article from "./component/Article";
 import './App.css';
-
 
 
 function App() {

@@ -10,20 +10,18 @@ export default function MonsterPage() {
     const [monsterData, setMonsterData] = useState();
 
     useEffect(() => {
-        axios.get(resources.getMonster+monsterName)
+        axios.get(resources.getMonster + monsterName)
             .then(value => {
                 setMonsterData(value.data);
             })
             .catch(function (error) {
                 console.log(error);
             });
-    }, [setMonsterData]);
+    }, [monsterName, setMonsterData]);
 
     console.log(monsterData);
 
-    return (
-        <div className='monster--view-container'>
-            {(monsterData!==undefined  && <Monster data={monsterData}/>)|| <h3>Loading data</h3>}
-        </div>
-    )
+    return (<div className='monster--view-container'>
+            {(monsterData !== undefined && <Monster data={monsterData}/>) || <h3>Loading data</h3>}
+        </div>)
 }

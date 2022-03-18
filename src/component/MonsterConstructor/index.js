@@ -141,9 +141,7 @@ export default function MonsterConstructor() {
                 <h3>Constructor</h3>
                 <Scrollbars
                     hideTracksWhenNotNeeded
-
                 >
-
                 <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster}
                              addLast={preventDefault}
                              cleanAll={clean} metaSetter={setMeta} speedSetter={setSpeed} languagesSetter={setLanguage}

@@ -69,9 +69,6 @@ export default function Monster(props) {
                              dangerouslySetInnerHTML={{__html: props.data.Legendary_Actions}}/>) ||
                     <div className='monster--block'>No legendary actions found</div>}
             </div>
-            {/*<Link to={'/monster/'+props.value.name} className='block--challenge'><p className='block--meta'>check this monster</p></Link>*/}
-
-
         </div>
     )
 }
