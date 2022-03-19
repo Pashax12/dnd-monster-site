@@ -3,5 +3,8 @@
   "createEncounter":"http://localhost:8080/createencounter",
   "getMonster":"http://localhost:8080/monsterlibrary/",
   "addMonster": "http://localhost:8080/usermonster",
-  "getNews":"http://localhost:8080/article/"
+  "getNews":"http://localhost:8080/article/",
+  "login":"http://localhost:8080/auth/singup",
+  "auth":"http://localhost:8080/auth/singin",
+  "logout":"http://localhost:8080/auth/logout"
 }

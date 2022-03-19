@@ -2,10 +2,12 @@ import React from "react";
 import './style.css';
 import axios from "axios";
 import resources from "../../resource.json";
+import {useNavigate} from "react-router-dom";
 
 import Constructor from "./Constructor";
 import Monster from "../Monster";
 import {Scrollbars} from "react-custom-scrollbars-2";
+
 
 export default function MonsterConstructor() {
 
@@ -42,6 +44,8 @@ export default function MonsterConstructor() {
 
 
     const [monsterData, setMonsterData] = React.useState(cleanForm);
+
+    const navigate = useNavigate();
 
 
     function preventDefault(event) {
@@ -118,38 +122,52 @@ export default function MonsterConstructor() {
 
     function generateMonster(event) {
         event.preventDefault();
-        axios.post(resources.addMonster, monsterData)
-            .then(value => {
-                alert(value.data);
+        if (false) {
+            navigate('/auth/login');
+        } else {
+            axios.post(resources.addMonster, monsterData, {
+                headers: {
+                    Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXZlbC5tLnBhc2hheDEyQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjQ3NzE1Nzc0LCJleHAiOjE2NDc3NzYyNTR9.ZnZGURM9q2S7-ErJgYLnqqGUM9Neal7GqXtDHiZmwX0"
+                }
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+                .then(value => {
+                    alert(value.data);
+                    console.log(value.data);
+                })
+                .catch(function (error) {
+                    console.log(error.message);
+                });
+        }
     }
 
 
-    return (<main className='monster-constructor--container'>
-        <div className='monster-constructor--boxes'>
-            <div className='monster-constructor--box-1'>
-                <h1>Monster constructor</h1>
-                {(monsterData && <div className='monster-constructor--contest'>
-                    <Monster data={monsterData}/>
-                </div>)}
+    return (
+
+        <main className='monster-constructor--container'>
+            <div className='monster-constructor--boxes'>
+                <div className='monster-constructor--box-1'>
+                    <h1>Monster constructor</h1>
+                    {(monsterData && <div className='monster-constructor--contest'>
+                        <Monster data={monsterData}/>
+                    </div>)}
+                </div>
+
+                <div className='monster-constructor--box-2'>
+                    <h3>Constructor</h3>
+                    <Scrollbars
+                        hideTracksWhenNotNeeded
+                    >
+                        <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster}
+                                     addLast={preventDefault}
+                                     cleanAll={clean} metaSetter={setMeta} speedSetter={setSpeed}
+                                     languagesSetter={setLanguage}
+                                     traitsSetter={setTraits} actionSetter={setAction}
+                                     legendarySetter={setLegendaryAction}/>
+                    </Scrollbars>
+                </div>
+
             </div>
 
-            <div className='monster-constructor--box-2'>
-                <h3>Constructor</h3>
-                <Scrollbars
-                    hideTracksWhenNotNeeded
-                >
-                <Constructor data={monsterData} onChange={handleChange} onSubmit={generateMonster}
-                             addLast={preventDefault}
-                             cleanAll={clean} metaSetter={setMeta} speedSetter={setSpeed} languagesSetter={setLanguage}
-                             traitsSetter={setTraits} actionSetter={setAction} legendarySetter={setLegendaryAction}/>
-                </Scrollbars>
-            </div>
-
-        </div>
-
-    </main>)
+        </main>
+    )
 }
