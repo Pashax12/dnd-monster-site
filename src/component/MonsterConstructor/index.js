@@ -121,13 +121,14 @@ export default function MonsterConstructor() {
     }
 
     function generateMonster(event) {
+        const token =localStorage.getItem("token");
         event.preventDefault();
-        if (false) {
+        if (token === undefined) {
             navigate('/auth/login');
         } else {
             axios.post(resources.addMonster, monsterData, {
                 headers: {
-                    Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXZlbC5tLnBhc2hheDEyQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjQ3NzE1Nzc0LCJleHAiOjE2NDc3NzYyNTR9.ZnZGURM9q2S7-ErJgYLnqqGUM9Neal7GqXtDHiZmwX0"
+                    Authorization: token
                 }
             })
                 .then(value => {
@@ -135,7 +136,8 @@ export default function MonsterConstructor() {
                     console.log(value.data);
                 })
                 .catch(function (error) {
-                    console.log(error.message);
+                    alert('Authentication error redirect to the login page');
+                    navigate('/auth/authorize');
                 });
         }
     }

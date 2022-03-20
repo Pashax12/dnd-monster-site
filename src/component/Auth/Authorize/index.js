@@ -40,6 +40,7 @@ export default function Authorize() {
                 .then(value => {
                     setMessage("You successfully authorize in your account")
                     console.log(value.data)
+                    localStorage.setItem("token", value.data.token)
                 }).catch(function (error) {
             });
         }
