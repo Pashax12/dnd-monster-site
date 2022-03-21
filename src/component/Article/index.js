@@ -12,17 +12,15 @@ export default function Article() {
         axios.get(resource.getNews + id).then(value => setNews(value.data));
     }, [id, setNews]);
 
-    console.log(news);
     return (
 
         <div className='news--container'>
 
             <h3 className='news--title'>{news.title}</h3>
             <p className='news--data'>{news.uploadDate}</p>
-            {(news.content  && news.content.split('\n').map(value =>  <p key={nanoid()} className='news--short'>{value}</p>))}
+            {(news.content && news.content.split('\n').map(value => <p key={nanoid()}
+                                                                       className='news--short'>{value}</p>))}
         </div>
-
-
 
     )
 }

@@ -1,0 +1,75 @@
+.authorize--form{
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    font-family: Risque, serif;
+    font-style: normal;
+    font-weight: normal;
+    background:  linear-gradient(to right, #DDC493, #EECC88);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+.authorize--container{
+
+    box-sizing: border-box;
+}
+.authorize--text{
+    margin: 5px 5px ;
+    width: 80%;
+    font-size: 15px;
+    display: inline-block;
+}
+.authorize--placeholder{
+    width: 60%;
+    margin: 7px 10px;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+.authorize--button-onSubmit{
+    margin: 10px 5px 5px 5px;
+    font-size: 15px;
+    width: 50%;
+    background-color: #EECC88;
+    border: 2px solid #B89D69;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.authorize--message-text{
+    font-family: Ebrima, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    display: block;
+    opacity: 0.5;
+    background-color:#D9B161;
+    width: 70%;
+    height: 35px;
+    margin: auto;
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.5);
+    padding-top: 7px;
+
+}
+@media (max-width: 700px) {
+
+    .authorize--form{
+        text-align: center;
+        display: block;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        font-family: Risque, serif;
+        font-style: normal;
+        font-weight: normal;
+        background:  linear-gradient(to right, #DDC493, #EECC88);
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        border-radius: 25px;
+        box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+
+    }
+}

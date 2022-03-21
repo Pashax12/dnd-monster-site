@@ -8,20 +8,20 @@ import Filter from "./Filters";
 import {Scrollbars} from "react-custom-scrollbars-2";
 
 
-export default function MonsterLibrary(){
+export default function MonsterLibrary() {
 
-    const [monsters, setMonster]  = useState([{}]);
+    const [monsters, setMonster] = useState([{}]);
 
     const [formData, setFormData] = React.useState(
         {
-            monsterType:'',
-            monsterSize:'',
-            minMonsterChallenge:'10',
-            maxMonsterChallenge:'155000',
-            monsterOutlook:'',
-            source:false,
-            legendaryAction:false,
-            specialSkills:false
+            monsterType: '',
+            monsterSize: '',
+            minMonsterChallenge: '10',
+            maxMonsterChallenge: '155000',
+            monsterOutlook: '',
+            source: false,
+            legendaryAction: false,
+            specialSkills: false
         }
     )
 
@@ -37,7 +37,7 @@ export default function MonsterLibrary(){
 
     useEffect(() => {
         console.log(formData);
-       axios.post(resources.postCriteria, formData)
+        axios.post(resources.postCriteria, formData)
             .then(value => {
                 console.log(value.data);
                 return setMonster(value.data)
@@ -45,31 +45,31 @@ export default function MonsterLibrary(){
             .catch(function (error) {
                 console.log(error);
             });
-    },[formData, setMonster]);
+    }, [formData, setMonster]);
 
 
-    return(
-    <main className='library--container'>
-        <div className='library--boxes'>
-            <div className='library--box-1'>
-                <h1>Our monsters</h1>
-                <Scrollbars
-                    autoHide
-                    universal
-                    autoHeight
-                    autoHeightMax={600}>
-                    <div className='library--contest'>
-                        {(monsters.length>1 && monsters.map(value => <Block key={nanoid()} value={value}/>))}
-                    </div>
-                </Scrollbars>
+    return (
+        <main className='library--container'>
+            <div className='library--boxes'>
+                <div className='library--box-1'>
+                    <h1>Our monsters</h1>
+                    <Scrollbars
+                        autoHide
+                        universal
+                        autoHeight
+                        autoHeightMax={600}>
+                        <div className='library--contest'>
+                            {(monsters.length > 1 && monsters.map(value => <Block key={nanoid()} value={value}/>))}
+                        </div>
+                    </Scrollbars>
+                </div>
+
+                <div className='library--box-2'>
+                    <h3>Filters</h3>
+                    <Filter value={{data: formData, change: handleChange}}/>
+                </div>
             </div>
 
-            <div className='library--box-2'>
-                <h3>Filters</h3>
-                <Filter value={{data:formData, change:handleChange}} />
-            </div>
-        </div>
-
-    </main>
+        </main>
     )
 }
